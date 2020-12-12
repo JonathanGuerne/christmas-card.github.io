@@ -18,7 +18,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#div_logo{
+#div_logo {
     height: 100vh;
 }
 
@@ -27,7 +27,7 @@ body {
     transform: translate(0%, 500%);
 }
 
-#txt_noel{
+#txt_noel {
     animation: fadeIn 5s ease;
     -webkit-animation: fadeIn 5s ease;
     -moz-animation: fadeIn 5s ease;
@@ -36,7 +36,6 @@ body {
 }
 
 .item {
-
     width: 85%;
     height: 300px;
     margin: 50px auto;
@@ -44,13 +43,41 @@ body {
     background: #F2F2F0;
     color: #010326;
     font-size: 1.2em;
-
     box-shadow: 2px 2px #03738C;
-  }
+}
 
+.item p{
+    margin-bottom: 10px;
+}
 
-.item .big{
+.item .big {
     font-size: 2em;
+}
+
+.item .very-big{
+    font-size: 3em;
+}
+
+.bouncing {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.shaking{
+    animation-name: shake;
+    /* transform-origin: center bottom; */
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
 }
 
 @keyframes fadeIn {
@@ -97,3 +124,42 @@ body {
         opacity: 1;
     }
 }
+
+@keyframes bounce {
+    0%, 2.498%, 6.623%, 9.996%, 12.499% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    4.996%, 5.372% {
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    8.75% {
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    11.248% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
