@@ -8,6 +8,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #7ED9D0;
+    font-family: 'Roboto', sans-serif;
 }
 
 #txt_noel {
@@ -36,17 +37,21 @@ body {
 
 .item {
 
-    transform: translate(0, 300px);
-
-    width: 200px;
-    height: 200px;
+    width: 85%;
+    height: 300px;
     margin: 50px auto;
-    padding-top: 75px;
-    background: #ccc;
-    text-align: center;
-    color: #FFF;
-    font-size: 3em;
+    padding: 10px;
+    background: #F2F2F0;
+    color: #010326;
+    font-size: 1.2em;
+
+    box-shadow: 2px 2px #03738C;
   }
+
+
+.item .big{
+    font-size: 2em;
+}
 
 @keyframes fadeIn {
     0% {
